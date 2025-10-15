@@ -1,0 +1,230 @@
+// CyberHoot - Interactive JavaScript
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Highlight active navigation link
+    highlightActiveLink();
+
+    // Initialize quiz if on quiz page
+    if (document.querySelector('.quiz-container')) {
+        initQuiz();
+    }
+
+    // Initialize contact form if on contact page
+    if (document.querySelector('.contact-form')) {
+        initContactForm();
+    }
+
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
+// Highlight Active Navigation Link
+function highlightActiveLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Quiz Functionality
+function initQuiz() {
+    const quizForm = document.getElementById('quiz-form');
+    const submitBtn = document.getElementById('submit-quiz');
+    const resultDiv = document.getElementById('quiz-result');
+    const scoreSpan = document.getElementById('score');
+    const retryBtn = document.getElementById('retry-quiz');
+
+    if (!quizForm) return;
+
+    // Quiz answers (correct answers)
+    const answers = {
+        q1: 'b',
+        q2: 'c',
+        q3: 'b',
+        q4: 'c',
+        q5: 'b'
+    };
+
+    submitBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        calculateScore();
+    });
+
+    if (retryBtn) {
+        retryBtn.addEventListener('click', function() {
+            quizForm.reset();
+            resultDiv.classList.remove('show', 'success', 'warning');
+        });
+    }
+
+    function calculateScore() {
+        let score = 0;
+        let total = Object.keys(answers).length;
+
+        for (let question in answers) {
+            const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+            if (userAnswer && userAnswer.value === answers[question]) {
+                score++;
+            }
+        }
+
+        const percentage = (score / total) * 100;
+        scoreSpan.textContent = `${score}/${total}`;
+        
+        resultDiv.classList.add('show');
+        if (percentage >= 70) {
+            resultDiv.classList.add('success');
+            resultDiv.classList.remove('warning');
+        } else {
+            resultDiv.classList.add('warning');
+            resultDiv.classList.remove('success');
+        }
+
+        // Scroll to result
+        resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+}
+
+// Contact Form Functionality
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        // Validate form
+        if (!validateForm(formData)) {
+            return;
+        }
+
+        // Simulate form submission
+        showFormMessage('success', 'Thank you for your message! We will get back to you soon.');
+        contactForm.reset();
+    });
+}
+
+function validateForm(data) {
+    // Simple validation
+    if (!data.name || data.name.trim().length < 2) {
+        showFormMessage('error', 'Please enter a valid name.');
+        return false;
+    }
+
+    if (!data.email || !isValidEmail(data.email)) {
+        showFormMessage('error', 'Please enter a valid email address.');
+        return false;
+    }
+
+    if (!data.subject || data.subject.trim().length < 3) {
+        showFormMessage('error', 'Please enter a subject.');
+        return false;
+    }
+
+    if (!data.message || data.message.trim().length < 10) {
+        showFormMessage('error', 'Please enter a message (at least 10 characters).');
+        return false;
+    }
+
+    return true;
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showFormMessage(type, message) {
+    // Remove existing messages
+    const existingMsg = document.querySelector('.form-message');
+    if (existingMsg) {
+        existingMsg.remove();
+    }
+
+    // Create message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message ${type}`;
+    messageDiv.style.padding = '1rem';
+    messageDiv.style.marginTop = '1rem';
+    messageDiv.style.borderRadius = '5px';
+    messageDiv.style.textAlign = 'center';
+    messageDiv.textContent = message;
+
+    if (type === 'success') {
+        messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+        messageDiv.style.border = '2px solid #28a745';
+        messageDiv.style.color = '#28a745';
+    } else {
+        messageDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+        messageDiv.style.border = '2px solid #dc3545';
+        messageDiv.style.color = '#dc3545';
+    }
+
+    const form = document.getElementById('contact-form');
+    form.appendChild(messageDiv);
+
+    // Remove message after 5 seconds
+    setTimeout(() => {
+        messageDiv.remove();
+    }, 5000);
+}
+
+// Scroll animations
+window.addEventListener('scroll', function() {
+    const cards = document.querySelectorAll('.card, .resource-item, .tool-card');
+    
+    cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        const cardBottom = card.getBoundingClientRect().bottom;
+        
+        if (cardTop < window.innerHeight && cardBottom > 0) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+// Initialize card animations
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card, .resource-item, .tool-card');
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+});
