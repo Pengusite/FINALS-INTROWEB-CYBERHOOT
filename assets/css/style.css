@@ -55,6 +55,56 @@ header {
   position: relative;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #33586e;
+  cursor: pointer;
+  margin-left: 16px;
+  z-index: 20;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  min-width: 130px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 38px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  color: #222;
+  font-size: 1.08rem;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 8px;
+  transition: color 0.15s, background 0.15s;
+  border-radius: 4px;
+  outline: none;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: #d7e8fa;
+  color: #193e7d;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(0, 64, 128, 0.9)),
