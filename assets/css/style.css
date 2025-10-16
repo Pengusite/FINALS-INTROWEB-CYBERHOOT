@@ -1,5 +1,6 @@
 /* CyberHoot - Modern Responsive Styles */
 /* Global Styles */
+
 :root {
   --primary-color: #33586e;
   --secondary-color: #0e3a7e;
@@ -137,6 +138,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 /* Responsive 16:9 Aspect Ratio for YouTube */
@@ -149,6 +151,7 @@ header {
   background: #e2efff;
   box-shadow: 0 2px 16px rgba(51,88,110,0.11);
   display: block;
+
 }
 
 /* --- Mobile Video Styles --- */
@@ -257,6 +260,7 @@ header {
 
 /* Buttons */
 .btn, .btn-secondary {
+  margin-top: 1rem;
   display: inline-block;
   padding: 0.65rem 1.6rem;
   background-color: var(--accent-color);
@@ -277,6 +281,7 @@ header {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
 }
 .btn-secondary {
+  margin-top: 1rem;
   background-color: var(--secondary-color);
 }
 .btn-secondary:hover {
@@ -313,6 +318,8 @@ main {
 .card, .tool-card {
   background: var(--white);
   padding: 2rem 1.3rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s cubic-bezier(.43,.25,.42,1.15), box-shadow 0.4s;
@@ -341,6 +348,8 @@ main {
   padding: 1.7rem 1.3rem;
   margin-bottom: 2rem; /* add space between boxes */
   border-radius: 12px;
+  margin-right: 1.3rem;
+  margin-left: 1.3rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: box-shadow 0.3s, transform 0.3s;
   position: relative;
@@ -408,6 +417,8 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
   transition: box-shadow 0.3s;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
 }
 .feature-item:hover {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
