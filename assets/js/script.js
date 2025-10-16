@@ -29,6 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Highlight active navigation link
     highlightActiveLink();
 
+    // Animate cards/sections on initial load (fade-in)
+    setTimeout(() => {
+        const cards = document.querySelectorAll('.card, .resource-item, .tool-card, .feature-item');
+        cards.forEach((card, i) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px) scale(0.97)';
+            card.style.transition = 'opacity 0.7s cubic-bezier(.42,.14,.53,1.28), transform 0.7s cubic-bezier(.42,.14,.53,1.28)';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+            }, 150 + i * 80);
+        });
+    }, 200);
+
     // Initialize quiz if on quiz page
     if (document.querySelector('.quiz-container')) {
         initQuiz();
