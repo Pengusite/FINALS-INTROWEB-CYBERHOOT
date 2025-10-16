@@ -43,11 +43,14 @@ CyberHoot is an educational website designed to make cybersecurity learning simp
 
 ## Website Pages
 
-| **Page Name**         | **Description**                                                                                         |
-|---------------------- |--------------------------------------------------------------------------------------------------------|
-| **index.html**        | Homepage introducing CyberHoot, its mission, and a brief overview of cybersecurity topics.             |
-| **galleryPage.html**  | Portfolio page displaying personal projects and artworks in a clean, organized layout.                  |
-| **contactPage.html**  | Contact form for commissions, inquiries, or collaborations, plus social media links.                    |
+| **Page Name**      | **Description**                                                                                           |
+|--------------------|----------------------------------------------------------------------------------------------------------|
+| **index.html**     | Homepage introducing CyberHoot, its mission, and a brief overview of cybersecurity topics.               |
+| **about.html**     | Information about CyberHoot, the project, and the team behind the website.                               |
+| **contact.html**   | Contact form for commissions, inquiries, or collaborations, plus social media links.                     |
+| **quiz.html**      | Interactive quizzes to test and reinforce cybersecurity knowledge.                                       |
+| **resources.html** | Curated resources for learning and implementing cybersecurity best practices.                            |
+| **tools.html**     | Practical cybersecurity tools for users to enhance their online safety.     
 
 ---
 
