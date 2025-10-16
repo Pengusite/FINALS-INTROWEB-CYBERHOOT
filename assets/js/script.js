@@ -189,3 +189,16 @@ function showFormMessage(type, message) {
     form.appendChild(messageDiv);
     setTimeout(() => { messageDiv.remove(); }, 5000);
 }
+
+// Toast Notification (for feedback, quiz, forms, etc.)
+function showToast(message, type="info") {
+    let toast = document.createElement('div');
+    toast.className = 'toast ' + type;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.classList.add('show'); }, 100);
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 500);
+    }, 3500);
+}
