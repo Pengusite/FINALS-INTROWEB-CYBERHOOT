@@ -7,28 +7,28 @@
 
 ## Group Members & Task Distribution
 
-### **Member 1 – Project Lead / Website Structure**
+### **Catanghal Justine – Project Lead / Website Structure**
 - Set up the website’s core structure: header, navigation, and footer.
 - Managed repository organization and code cleanup.
 - Oversaw overall progress and team communication.
 
-───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── 
+────────────────── ✦✧✦ ────────────────── ✦✧✦ ──────────────────
 
-### **Member 2 – Main Page & Content**
+### **Canicosa, Kyzer Owen – Main Page & Content**
 - Designed and coded the main landing page (`index.html`).
 - Gathered and presented artist biography, experiences, skills, and education.
 - Ensured content accuracy and clarity.
 
-───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── 
+────────────────── ✦✧✦ ────────────────── ✦✧✦ ──────────────────
 
-### **Member 3 – Gallery Page & Mobile Navigation**
+### **Palo, Cedric Nathan – Gallery Page & Mobile Navigation**
 - Developed the gallery/portfolio page showcasing artworks and projects (`galleryPage.html`).
 - Implemented mobile/hamburger navigation for improved mobile usability.
 - Optimized gallery layout for various screen sizes.
 
-───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── 
+────────────────── ✦✧✦ ────────────────── ✦✧✦ ──────────────────
 
-### **Member 4 – Contact Page & Responsive Design**
+### **Patio, Kenth Andrei – Contact Page & Responsive Design**
 - Created the contact page with commission, inquiry, and collaboration info (`contactPage.html`).
 - Added and verified social media/contact links.
 - Handled responsive design for tablet and mobile views across all pages.
