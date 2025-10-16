@@ -286,15 +286,20 @@ header {
 
 /* Main Content */
 main {
-    min-height: calc(100vh - 200px);
-    padding: 2rem 0;
+  flex: 1;
+  padding: 2rem 0 2rem 0;
+}
+/* --- Mobile Main Content --- */
+@media (max-width: 600px) {
+  main { padding: 1rem 0; }
 }
 
 .page-title {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /* Cards */
