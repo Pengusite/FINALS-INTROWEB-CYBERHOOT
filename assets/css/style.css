@@ -420,70 +420,59 @@ main {
 
 /* Quiz Section */
 .quiz-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.09);
 }
-
-.quiz-question {
-    margin-bottom: 2rem;
-}
-
 .quiz-question h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.07rem;
+  font-weight: 500;
 }
-
 .quiz-options {
-    list-style: none;
+  list-style: none;
+  padding-left: 0;
 }
-
 .quiz-options li {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-
 .quiz-options label {
-    display: block;
-    padding: 1rem;
-    background: var(--bg-color);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  display: block;
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
 .quiz-options label:hover {
-    background-color: rgba(0, 102, 204, 0.1);
+  background-color: rgba(0, 102, 204, 0.11);
 }
-
 .quiz-options input[type="radio"] {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
-
 .quiz-result {
-    display: none;
-    padding: 1.5rem;
-    margin-top: 2rem;
-    border-radius: 5px;
-    text-align: center;
+  display: none;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  background: #f8f8fa;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.09);
 }
-
-.quiz-result.show {
-    display: block;
-}
-
+.quiz-result.show { display: block; }
 .quiz-result.success {
-    background-color: rgba(40, 167, 69, 0.1);
-    border: 2px solid var(--success);
-    color: var(--success);
+  background-color: rgba(40, 167, 69, 0.09);
+  border: 2px solid var(--success);
+  color: var(--success);
 }
-
 .quiz-result.warning {
-    background-color: rgba(255, 193, 7, 0.1);
-    border: 2px solid var(--warning);
-    color: #856404;
+  background-color: rgba(255, 193, 7, 0.09);
+  border: 2px solid var(--warning);
+  color: #856404;
 }
 
 /* Contact Form */
