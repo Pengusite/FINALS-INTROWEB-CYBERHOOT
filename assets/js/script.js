@@ -84,54 +84,36 @@ function initQuiz() {
     const resultDiv = document.getElementById('quiz-result');
     const scoreSpan = document.getElementById('score');
     const retryBtn = document.getElementById('retry-quiz');
-
     if (!quizForm) return;
-
-    // Quiz answers (correct answers)
-    const answers = {
-        q1: 'b',
-        q2: 'c',
-        q3: 'b',
-        q4: 'c',
-        q5: 'b'
-    };
-
+    const answers = { q1: 'b', q2: 'c', q3: 'b', q4: 'c', q5: 'b' };
     submitBtn.addEventListener('click', function(e) {
         e.preventDefault();
         calculateScore();
     });
-
     if (retryBtn) {
         retryBtn.addEventListener('click', function() {
             quizForm.reset();
             resultDiv.classList.remove('show', 'success', 'warning');
         });
     }
-
     function calculateScore() {
-        let score = 0;
-        let total = Object.keys(answers).length;
-
+        let score = 0, total = Object.keys(answers).length;
         for (let question in answers) {
             const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
-            if (userAnswer && userAnswer.value === answers[question]) {
-                score++;
-            }
+            if (userAnswer && userAnswer.value === answers[question]) score++;
         }
-
         const percentage = (score / total) * 100;
         scoreSpan.textContent = `${score}/${total}`;
-        
         resultDiv.classList.add('show');
         if (percentage >= 70) {
             resultDiv.classList.add('success');
             resultDiv.classList.remove('warning');
+            showToast('Great job! You passed the quiz!', 'success');
         } else {
             resultDiv.classList.add('warning');
             resultDiv.classList.remove('success');
+            showToast('Keep learning! Review resources for more.', 'error');
         }
-
-        // Scroll to result
         resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
