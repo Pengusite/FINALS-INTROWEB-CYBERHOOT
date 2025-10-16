@@ -43,14 +43,14 @@ CyberHoot is an educational website designed to make cybersecurity learning simp
 
 ## Website Pages
 
-| **Page Name**      | **Description**                                                                                           |
-|--------------------|----------------------------------------------------------------------------------------------------------|
-| **index.html**     | Homepage introducing CyberHoot, its mission, and a brief overview of cybersecurity topics.               |
-| **about.html**     | Information about CyberHoot, the project, and the team behind the website.                               |
-| **contact.html**   | Contact form for commissions, inquiries, or collaborations, plus social media links.                     |
-| **quiz.html**      | Interactive quizzes to test and reinforce cybersecurity knowledge.                                       |
-| **resources.html** | Curated resources for learning and implementing cybersecurity best practices.                            |
-| **tools.html**     | Practical cybersecurity tools for users to enhance their online safety.     
+| **Page Name**      | **Role / Section** | **Description**                                                                                           |
+|--------------------|--------------------|----------------------------------------------------------------------------------------------------------|
+| **index.html**     | Home               | Main landing page introducing CyberHoot, its mission, and a brief overview of cybersecurity topics.      |
+| **about.html**     | About              | Information about CyberHoot, the project, and the team behind the website.                               |
+| **resources.html** | Resources          | Curated resources for learning and implementing cybersecurity best practices.                            |
+| **tools.html**     | Tools              | Practical cybersecurity tools for users to enhance their online safety.                                  |
+| **quiz.html**      | Quiz               | Interactive quizzes to test and reinforce cybersecurity knowledge.                                       |
+| **contact.html**   | Contact            | Contact form for commissions, inquiries, or collaborations, plus social media links.                     |
 
 ---
 
