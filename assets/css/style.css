@@ -105,6 +105,25 @@ header {
   color: #193e7d;
 }
 
+/* Search Button */
+.nav-search {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  cursor: pointer;
+  margin-left: 18px;
+  transition: box-shadow 0.2s;
+}
+.nav-search:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, rgba(0, 102, 204, 0.9), rgba(0, 64, 128, 0.9)),
