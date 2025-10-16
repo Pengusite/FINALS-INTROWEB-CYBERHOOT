@@ -68,7 +68,7 @@ CyberHoot is an educational website designed to make cybersecurity learning simp
 ---
 
 ### Concept Design
-🔗 [View Figma Concept](#) <!-- Add Figma or wireframe link here if available -->
+🔗 [View Figma Concept](https://www.figma.com/design/itv9NUkIQuLGWCOmLBrQpN/CATANGHAL---MOCK-UP?node-id=0-1&t=Mc4fkp4mbWGIHyOD-1)
 
 ---
 
