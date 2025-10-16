@@ -1,13 +1,28 @@
 // CyberHoot - Interactive JavaScript
 
-// Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger Menu Toggle (Responsive Nav)
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
-    if (menuToggle) {
+    if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+        });
+        // Close menu when clicking outside or a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            });
+        });
+        document.addEventListener('click', function(e) {
+            if (navLinks.classList.contains('active') &&
+                !navLinks.contains(e.target) &&
+                !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('nav-open');
+            }
         });
     }
 
