@@ -787,3 +787,19 @@ footer {
 @media (max-width: 600px) {
   .toast { right: 6%; left: 6%; width: 88%; padding: 0.7rem 1rem; }
 }
+
+/* --- Print Styles --- */
+@media print {
+  header, footer, .top-bar, .bot-bar, .nav-container, .social-links {
+    display: none !important;
+  }
+  main, .container {
+    width: 100vw !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  body {
+    background: #fff !important;
+    color: #333 !important;
+  }
+}
