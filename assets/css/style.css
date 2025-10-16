@@ -255,31 +255,33 @@ header {
   .hero p { font-size: 1rem; }
 }
 
-.btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background-color: var(--accent-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+/* Buttons */
+.btn, .btn-secondary {
+  display: inline-block;
+  padding: 0.65rem 1.6rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1.07rem;
+  font-weight: 500;
+  margin: 0 3px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
-
 .btn:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
 }
-
 .btn-secondary {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
-
 .btn-secondary:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 /* Main Content */
