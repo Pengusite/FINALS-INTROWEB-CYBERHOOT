@@ -202,3 +202,24 @@ function showToast(message, type="info") {
         setTimeout(() => toast.remove(), 500);
     }, 3500);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    // find all headers with class "clickable"
+    const clickableHeaders = document.querySelectorAll(".resource-item .clickable");
+
+    clickableHeaders.forEach(header => {
+        header.style.cursor = "pointer"; // show it's clickable
+
+        header.addEventListener("click", () => {
+            // get the parent div's data-link
+            const parent = header.closest(".resource-item");
+            const link = parent ? parent.getAttribute("data-link") : null;
+
+            if (link) {
+                window.open(link, "_blank"); // open in new tab
+            } else {
+                console.warn("No link found for this header:", header.innerText);
+            }
+        });
+    });
+});
