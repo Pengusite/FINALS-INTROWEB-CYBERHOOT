@@ -302,36 +302,37 @@ main {
   font-weight: 700;
 }
 
-/* Cards */
+/* Cards & Grids */
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
-
-.card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card, .tool-card {
+  background: var(--white);
+  padding: 2rem 1.3rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(.43,.25,.42,1.15), box-shadow 0.4s;
+  opacity: 1;
+  transform: translateY(0);
 }
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+.card:hover, .tool-card:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.13);
 }
-
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.card h3, .tool-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.22rem;
+  font-weight: 600;
 }
-
-.card-icon {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+.card-icon, .tool-icon {
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
 }
 
 /* Features Section */
