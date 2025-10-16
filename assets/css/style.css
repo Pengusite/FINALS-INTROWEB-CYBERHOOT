@@ -704,73 +704,60 @@ footer {
   opacity: 0.85;
 }
 
+/* --- Tablet Footer Styles --- */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 1.2rem auto;
+    padding: 0 1rem;
+  }
+  .footer-section {
+    flex: 1 1 0;
+    min-width: 170px;
+    margin-bottom: 0;
+    padding: 0 0.5rem;
+  }
+  .footer-section h3 {
+    font-size: 1.13rem;
+    margin-bottom: 0.7rem;
+  }
+  .footer-section ul {
+    margin-top: 0.5rem;
+  }
+  .social-links {
+    margin-top: 0.7rem;
+    margin-bottom: 0.3rem;
+    justify-content: flex-start;
+  }
+}
+
+/* --- Mobile Responsive Footer --- */
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-section {
+    min-width: 0;
+    flex: 1 1 100%;
+    margin-bottom: 1.2rem;
+  }
+  .social-links {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+}
+
 /* --- Utility Classes --- */
 .text-center { text-align: center; }
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .page-title {
-        font-size: 1.5rem;
-    }
-
-    .card {
-        padding: 1.5rem;
-    }
-}
