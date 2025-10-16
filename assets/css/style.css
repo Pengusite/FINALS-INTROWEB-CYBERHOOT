@@ -369,53 +369,53 @@ main {
   margin-bottom: 0.5rem;
 }
 
-/* Features Section */
-.features {
-    margin: 3rem 0;
-}
-
-.feature-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.feature-item {
-    text-align: center;
-    padding: 1.5rem;
-}
-
-.feature-item i {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-}
-
 /* Tools Section */
-.tool-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
 .tool-card {
-    background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background: var(--white);
+  padding: 2rem 1.3rem;
+  margin-bottom: 2rem; /* add space between tool cards! */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.tool-card:last-child {
+  margin-bottom: 0;
+}
+.tool-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-3px) scale(1.01);
+}
+/* --- Mobile Tool Card --- */
+@media (max-width: 600px) {
+  .tool-card {
+    padding: 1rem 0.6rem;
+    margin-bottom: 1.3rem;
+  }
 }
 
-.tool-card h3 {
-    color: var(--primary-color);
-    margin: 1rem 0;
+/* Feature Grid */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
 }
-
-.tool-card .tool-icon {
-    font-size: 3.5rem;
-    color: var(--accent-color);
+.feature-item {
+  text-align: center;
+  padding: 1.2rem 0.7rem;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s;
+}
+.feature-item:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.feature-item i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
 }
 
 /* Quiz Section */
