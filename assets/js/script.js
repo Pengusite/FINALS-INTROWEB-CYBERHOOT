@@ -121,53 +121,43 @@ function initQuiz() {
 // Contact Form Functionality
 function initContactForm() {
     const contactForm = document.getElementById('contact-form');
-    
     if (!contactForm) return;
-
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value
         };
-
-        // Validate form
-        if (!validateForm(formData)) {
-            return;
-        }
-
-        // Simulate form submission
+        if (!validateForm(formData)) return;
         showFormMessage('success', 'Thank you for your message! We will get back to you soon.');
+        showToast('Message sent!', 'success');
         contactForm.reset();
     });
 }
 
 function validateForm(data) {
-    // Simple validation
     if (!data.name || data.name.trim().length < 2) {
         showFormMessage('error', 'Please enter a valid name.');
+        showToast('Name is required.', 'error');
         return false;
     }
-
     if (!data.email || !isValidEmail(data.email)) {
         showFormMessage('error', 'Please enter a valid email address.');
+        showToast('Invalid email address.', 'error');
         return false;
     }
-
     if (!data.subject || data.subject.trim().length < 3) {
         showFormMessage('error', 'Please enter a subject.');
+        showToast('Subject is required.', 'error');
         return false;
     }
-
     if (!data.message || data.message.trim().length < 10) {
         showFormMessage('error', 'Please enter a message (at least 10 characters).');
+        showToast('Message is too short.', 'error');
         return false;
     }
-
     return true;
 }
 
@@ -177,13 +167,8 @@ function isValidEmail(email) {
 }
 
 function showFormMessage(type, message) {
-    // Remove existing messages
     const existingMsg = document.querySelector('.form-message');
-    if (existingMsg) {
-        existingMsg.remove();
-    }
-
-    // Create message element
+    if (existingMsg) existingMsg.remove();
     const messageDiv = document.createElement('div');
     messageDiv.className = `form-message ${type}`;
     messageDiv.style.padding = '1rem';
@@ -191,47 +176,16 @@ function showFormMessage(type, message) {
     messageDiv.style.borderRadius = '5px';
     messageDiv.style.textAlign = 'center';
     messageDiv.textContent = message;
-
     if (type === 'success') {
-        messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+        messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.11)';
         messageDiv.style.border = '2px solid #28a745';
         messageDiv.style.color = '#28a745';
     } else {
-        messageDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+        messageDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.09)';
         messageDiv.style.border = '2px solid #dc3545';
         messageDiv.style.color = '#dc3545';
     }
-
     const form = document.getElementById('contact-form');
     form.appendChild(messageDiv);
-
-    // Remove message after 5 seconds
-    setTimeout(() => {
-        messageDiv.remove();
-    }, 5000);
+    setTimeout(() => { messageDiv.remove(); }, 5000);
 }
-
-// Scroll animations
-window.addEventListener('scroll', function() {
-    const cards = document.querySelectorAll('.card, .resource-item, .tool-card');
-    
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        const cardBottom = card.getBoundingClientRect().bottom;
-        
-        if (cardTop < window.innerHeight && cardBottom > 0) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }
-    });
-});
-
-// Initialize card animations
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.card, .resource-item, .tool-card');
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-});
