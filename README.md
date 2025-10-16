@@ -21,8 +21,8 @@
 
 ────────────────── ✦✧✦ ────────────────── ✦✧✦ ──────────────────
 
-### **Palo, Cedric Nathan – Gallery Page & Mobile Navigation**
-- Developed the gallery/portfolio page showcasing artworks and projects (`galleryPage.html`).
+### **Palo, Cedric Nathan – About, Resources, Tools Page & Mobile Navigation**
+- Developed the About page showcasing our Goals
 - Implemented mobile/hamburger navigation for improved mobile usability.
 - Optimized gallery layout for various screen sizes.
 
