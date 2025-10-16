@@ -24,7 +24,7 @@
 ### **Palo, Cedric Nathan – About, Resources, Tools Page & Mobile Navigation**
 - Developed the About page showcasing our Goals
 - Implemented mobile/hamburger navigation for improved mobile usability.
-- Optimized gallery layout for various screen sizes.
+- Optimized mobile layout for various screen sizes.
 
 ────────────────── ✦✧✦ ────────────────── ✦✧✦ ──────────────────
 
