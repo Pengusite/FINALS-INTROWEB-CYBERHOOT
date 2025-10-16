@@ -548,6 +548,25 @@ main {
   transform: translateY(-2px) scale(1.04);
 }
 
+/* --- Tablet Contact Form --- */
+@media (min-width: 700px) {
+  .contact-form {
+    max-width: 640px;
+    padding: 3.5rem 3rem 2.5rem 3rem;
+  }
+}
+/* --- Mobile Contact Form --- */
+@media (max-width: 500px) {
+  .contact-form {
+    padding: 1.3rem 0.4rem 1.2rem 0.4rem;
+    margin: 1.2rem 0 2rem 0;
+    border-radius: 13px;
+  }
+  .contact-form .btn {
+    font-size: 1rem;
+  }
+}
+
 /* Footer */
 footer {
     background-color: var(--dark);
