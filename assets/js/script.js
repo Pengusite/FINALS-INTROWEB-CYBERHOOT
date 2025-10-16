@@ -1,4 +1,4 @@
-// CyberHoot - Interactive JavaScript
+// CyberHoot - Modern Interactive JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Hamburger Menu Toggle (Responsive Nav)
