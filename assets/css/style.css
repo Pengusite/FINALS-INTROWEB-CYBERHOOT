@@ -335,6 +335,40 @@ main {
   margin-bottom: 1rem;
 }
 
+/* Resource Section */
+.resource-item {
+  background: var(--white);
+  padding: 1.7rem 1.3rem;
+  margin-bottom: 2rem; /* add space between boxes */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.resource-item:last-child {
+  margin-bottom: 0; /* No margin after last box */
+}
+.resource-item:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-3px) scale(1.01);
+}
+/* --- Mobile Resource Item --- */
+@media (max-width: 600px) {
+  .resource-item {
+    padding: 1rem 0.6rem;
+    margin-bottom: 1.3rem;
+  }
+}
+.resource-item .category {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--accent-color);
+  color: var(--white);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Features Section */
 .features {
     margin: 3rem 0;
@@ -356,31 +390,6 @@ main {
     font-size: 3rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
-}
-
-/* Resources Section */
-.resource-item {
-    background: var(--white);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.resource-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.resource-item .category {
-    display: inline-block;
-    padding: 0.3rem 0.8rem;
-    background-color: var(--accent-color);
-    color: var(--white);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
 }
 
 /* Tools Section */
