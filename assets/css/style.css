@@ -1,29 +1,32 @@
 /* CyberHoot - Cybersecurity Awareness Website */
 /* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --primary-color: #33586e;
+  --secondary-color: #0e3a7e;
+  --accent-color: #72a0d4;
+  --text-color: #333;
+  --bg-color: #aec4df;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
 }
 
-:root {
-    --primary-color: #0066cc;
-    --secondary-color: #004080;
-    --accent-color: #00aaff;
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-    --white: #ffffff;
-    --dark: #1a1a1a;
-    --success: #28a745;
-    --warning: #ffc107;
-    --danger: #dc3545;
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header & Navigation */
